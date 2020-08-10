@@ -23,7 +23,15 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
+        <?php
+          wp_nav_menu(array(
+            "theme_location" => "nb_theme_primary_menu_id",
+            "container" => "false",
+            "items_wrap" => '<ul class="navbar-nav ml-auto">%3$s</ul>'
+          ));
+        ?>
+ 
+ <!--       <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
             <a class="nav-link" href="#">Home
               <span class="sr-only">(current)</span>
@@ -39,6 +47,7 @@
             <a class="nav-link" href="#">Contact</a>
           </li>
         </ul>
+  -->
       </div>
     </div>
   </nav>
